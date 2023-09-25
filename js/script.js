@@ -12,12 +12,15 @@ function newItem() {
             listItem.remove();
         });
 
+        // double click item to get cross
         listItem.on("dblclick", function () {
             listItem.toggleClass("crossed");
         });
+
         listItem.append(closeButton);
         $("#list").append(listItem);
 
+        //reset input field
         $("#input").val("");
     } else {
         alert("Enter Something to Add into the List	");
